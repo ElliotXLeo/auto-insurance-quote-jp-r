@@ -1,16 +1,38 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import styled from "@emotion/styled";
+
+const ContenedorHeader = styled.header`
+  background-color: #26c6da;
+  padding: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+`;
+
+const HeaderPrincipal = styled.h1`
+  font-size: 2rem;
+  margin: 0;
+`;
+
+const HeaderName = styled.h2`
+  margin: 0;
+`;
+
+const HeaderSlogan = styled.p`
+  margin: 0;
+`;
 
 function Header({ company }) {
 
   const { name, slogan, comercialActivity } = company;
 
   return (
-    <header className="header animate__animated animate__fadeInUp">
-      <h1>{comercialActivity}</h1>
-      <h2 className="header__name">{name}</h2>
-      <p>{slogan}</p>
-    </header>
+    <ContenedorHeader>
+      <HeaderPrincipal>{comercialActivity}</HeaderPrincipal>
+      <HeaderName className="header__name">{name}</HeaderName>
+      <HeaderSlogan>{slogan}</HeaderSlogan>
+    </ContenedorHeader>
   );
 }
 

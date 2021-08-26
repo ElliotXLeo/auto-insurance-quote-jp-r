@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 function App() {
 
   const company = {
-    name: 'Cotizador de Seguro de Autos',
+    name: 'Auto Feliz',
     slogan: '🚗Asegura tu auto, asegura tu vida.🚗',
     comercialActivity: 'Seguros'
   }
@@ -20,7 +20,7 @@ function App() {
       />
 
       <main className="main">
-        <h1>🚗Cotizador de Seguro de Autos🚗</h1>
+        <h2>🚗Cotizador de Seguro de Autos🚗</h2>
       </main>
 
       <Footer
