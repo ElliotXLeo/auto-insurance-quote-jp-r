@@ -42,25 +42,25 @@ ul {
   margin: 0;
 }
 
-span.resultado {
+.resultado {
   position: relative;
   width: 100%;
 }
 
 .resultado-enter {
-  transition: .5s;
+  transition: all 1s;
 }
 
 .resultado-enter.resultado-enter-active {
-  transform: translateY(0%);
+  transform: translateY(0);
 }
 
 .resultado-exit {
-  transform: translateY(0);
-  transition: .5s;
   position: absolute;
+  transform: translateY(0);
+  transition: all 1s;
   left: 0;
-  bottom: 0;
+  top: 0;
   right: 0;
 }
 
