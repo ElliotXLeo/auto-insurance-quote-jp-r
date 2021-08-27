@@ -6,7 +6,8 @@ html {
   --theme-color: #ffffff;
   --text-color: #ffffff;
   --text-color-inverse: #000000;
-  --primary-color: #26c6da;
+  --primary-color: #008b8b;
+  --primary-color-brightness: #29c1c4;
   --gold: #ffd700;
 }
 
@@ -30,10 +31,15 @@ html {
   width: 100%
 }
 
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   list-style: none;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
 }
 
 span.resultado {

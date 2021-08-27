@@ -53,3 +53,7 @@ export const pricePlan = (plan) => {
   }
   return increase;
 }
+
+export const uppercaseFirstLetter = (text) => {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}

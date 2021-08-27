@@ -37,7 +37,7 @@ const CampoBoton = styled.button`
   transition: all 0.5s;
 
   &:hover{
-    filter: brightness(110%);
+    filter: brightness(125%);
     color: var(--text-color-inverse);
   }
 `;
@@ -57,7 +57,7 @@ const Formulario = ({ setSummary }) => {
 
   const tenYears = lastTenYears();
 
-  const [datos, setDatos] = useState({
+  const [data, setData] = useState({
     mark: '',
     year: '',
     plan: ''
@@ -65,11 +65,11 @@ const Formulario = ({ setSummary }) => {
 
   const [error, setError] = useState(false);
 
-  const { mark, year, plan } = datos;
+  const { mark, year, plan } = data;
 
   const getInformation = (e) => {
-    setDatos({
-      ...datos,
+    setData({
+      ...data,
       [e.target.name]: e.target.value
     });
   };
@@ -87,10 +87,10 @@ const Formulario = ({ setSummary }) => {
 
     safe -= difference * safe * 0.03;
     safe = priceMark(mark) * safe;
-    safe = pricePlan(plan) * safe;
+    safe = parseFloat(pricePlan(plan) * safe).toFixed(2);
     setSummary({
       safe,
-      datos
+      data
     });
   }
 

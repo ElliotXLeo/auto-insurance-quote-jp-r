@@ -4,6 +4,8 @@ import styled from "@emotion/styled";
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Formulario from "./components/Formulario";
+import Resumen from "./components/Resumen";
+import Resultado from "./components/Resultado";
 
 
 const Contenedor = styled.div`
@@ -22,7 +24,16 @@ const ContenedorFormulario = styled.div`
 
 function App() {
 
-  const [summary, setSummary] = useState({});
+  const [summary, setSummary] = useState({
+    safe: 0,
+    data: {
+      mark: '',
+      year: '',
+      plan: ''
+    }
+  });
+
+  const { safe, data } = summary;
 
   const company = {
     name: '🚗Auto Feliz🚗',
@@ -43,6 +54,12 @@ function App() {
         <ContenedorFormulario>
           <Formulario
             setSummary={setSummary}
+          />
+          <Resumen
+            data={data}
+          />
+          <Resultado
+            safe={safe}
           />
         </ContenedorFormulario>
       </main>
