@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { uppercaseFirstLetter } from "../Helper";
+import PropTypes from 'prop-types';
 
 const ContenedorResumen = styled.div`
   background-color: var(--primary-color);
@@ -30,6 +31,10 @@ const Resumen = ({ data }) => {
     );
   }
 
+}
+
+Resumen.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 export default Resumen;

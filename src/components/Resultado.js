@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Spinner from "./Spinner";
+import PropTypes from 'prop-types';
 
 const ContenedorResultado = styled.div`
   background-color: var(--primary-color-brightness);
@@ -12,8 +13,6 @@ const ContenedorResultado = styled.div`
 `;
 
 const Resultado = ({ safe }) => {
-
-
   return (
     (safe <= 0) ?
       (
@@ -40,6 +39,10 @@ const Resultado = ({ safe }) => {
         </TransitionGroup>
       )
   );
+}
+
+Resultado.propTypes = {
+  safe: PropTypes.number.isRequired
 }
 
 export default Resultado;

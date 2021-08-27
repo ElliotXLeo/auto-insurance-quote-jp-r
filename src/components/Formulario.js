@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Fragment, useState } from "react";
 import { lastTenYears, yearsDifference, priceMark, pricePlan } from "../Helper";
+import PropTypes from 'prop-types';
 
 const Campo = styled.div`
   display: flex;
@@ -89,7 +90,7 @@ const Formulario = ({ setSummary }) => {
     safe = priceMark(mark) * safe;
     safe = parseFloat(pricePlan(plan) * safe).toFixed(2);
     setSummary({
-      safe,
+      safe: Number(safe),
       data
     });
   }
@@ -149,7 +150,7 @@ const Formulario = ({ setSummary }) => {
               type="radio"
               name="plan"
               value="basico"
-              // required
+              required
               checked={plan === "basico"}
               onChange={getInformation}
             /> Básico
@@ -158,7 +159,7 @@ const Formulario = ({ setSummary }) => {
               type="radio"
               name="plan"
               value="completo"
-              // required
+              required
               checked={plan === "completo"}
               onChange={getInformation}
             /> Completo
@@ -169,6 +170,10 @@ const Formulario = ({ setSummary }) => {
       </form>
     </Fragment>
   );
+}
+
+Formulario.propTypes = {
+  setSummary: PropTypes.func.isRequired
 }
 
 export default Formulario;
