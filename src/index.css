@@ -1,7 +1,13 @@
-html {
+* {
   box-sizing: border-box;
-  --gold: #ffd700;
+}
+
+html {
+  --theme-color: #ffffff;
   --text-color: #ffffff;
+  --text-color-inverse: #000000;
+  --primary-color: #26c6da;
+  --gold: #ffd700;
 }
 
 .body {
@@ -19,8 +25,9 @@ html {
   color: var(--gold);
 }
 
-.main{
+.main {
   text-align: center;
+  width: 100%
 }
 
 ul {

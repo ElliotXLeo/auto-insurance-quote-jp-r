@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import styled from "@emotion/styled";
 
 const ContenedorHeader = styled.header`
-  background-color: #26c6da;
+  background-color: var(--primary-color);
   padding: 1rem;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--text-color);
   text-align: center;
 `;
 

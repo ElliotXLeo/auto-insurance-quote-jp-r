@@ -1,11 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+
+const ContenedorHeader = styled.header`
+  background-color: var(--primary-color);
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-align: center;
+`;
+
 
 const Footer = ({ currentDate, author }) => {
   return (
-    <footer className="footer animate__animated animate__fadeInUp">
+    <ContenedorHeader className="ContenedorHeader animate__animated animate__fadeInUp">
       <p>🦄Copyright &copy; {currentDate} {author}. Todos los derechos reservados.🦄</p>
-    </footer>
+    </ContenedorHeader>
   );
 }
 
