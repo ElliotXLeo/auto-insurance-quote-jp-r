@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Spinner from "./Spinner";
 
 const ContenedorResultado = styled.div`
   background-color: var(--primary-color-brightness);
@@ -18,6 +19,7 @@ const Resultado = ({ safe }) => {
       (
         <ContenedorResultado>
           <h2>Ingrese todos los datos</h2>
+          <Spinner />
         </ContenedorResultado>
       )
       :
